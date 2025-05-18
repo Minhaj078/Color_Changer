@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Color Changer</title>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">Pick the color</div>
+        <div class="colors">
+    <div class="color-box" style="background-color: #3498db;" data-color="#3498db" title="Blue"></div>
+    <div class="color-box" style="background-color: #c66359;" data-color="#e74c3c" title="Red"></div>
+    <div class="color-box" style="background-color: #2ecc71;" data-color="#2ecc71" title="Green"></div>
+    <div class="color-box" style="background-color: #f1c40f;" data-color="#f1c40f" title="Yellow"></div>
+    <div class="color-box" style="background-color: #9b59b6;" data-color="#9b59b6" title="Purple"></div>
+</div>
+        <div class="instruction">Pick the color that you want to put in the background!</div>
+    </div>
+
+</body>
+<script>
+    const bx = document.querySelectorAll('.color-box')
+    bx.forEach(function(buttns){
+        buttns.addEventListener('click',function(){
+            const color = buttns.getAttribute('data-color');
+            document.body.style.backgroundColor = color;
+        })
+    })
+    
+</script>
+</html>
